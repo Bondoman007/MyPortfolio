@@ -4,15 +4,15 @@ import {
   GithubIcon,
   GamepadIcon,
   FolderIcon,
-  DownloadIcon,
-  FileTextIcon as DocumentIcon,
-  FileTextIcon,
+  FileTextIcon as DocumentIcon, // You can use either this name
+  FileTextIcon, // Or this name - choose one to avoid duplication
+  Trophy as TrophyIcon,
+  Linkedin as LinkedinIcon,
 } from "lucide-react";
 
 import { WinnerModal } from "./components/WinnerModal";
 import { ProjectsModal } from "./components/ProjectsModal";
-import { FaLinkedin as LinkedinIcon } from "react-icons/fa";
-import { FaTrophy as TrophyIcon } from "react-icons/fa";
+
 import Achievements from "./components/Achievement";
 // Import local resume file - make sure to place your resume.pdf in the public folder
 const resumeFile = "/Kanishk_Shrivastava_resume.pdf";
