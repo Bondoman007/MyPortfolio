@@ -127,11 +127,11 @@ const Achievements = ({ isOpen, onClose }) => {
                 <p className="text-gray-600 text-center mb-4">
                   {achievement.description}
                 </p>
-                <div
+                {/* <div
                   className={`${achievement.badgeColor} text-white text-xs font-bold px-3 py-1 rounded-full  mx-auto flex justify-center`}
                 >
-                  {achievement.badge}
-                </div>
+                  {/* {achievement.badge} 
+                </div> */}
               </div>
             </div>
           ))}
