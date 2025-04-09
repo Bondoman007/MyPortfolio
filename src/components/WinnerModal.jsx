@@ -1,5 +1,5 @@
 import React from "react";
-import { Trophy, X } from "lucide-react";
+import { Trophy, X, RefreshCw } from "lucide-react";
 
 export function WinnerModal({
   isOpen,
@@ -9,6 +9,10 @@ export function WinnerModal({
   onViewAchievements,
 }) {
   if (!isOpen) return null;
+
+  const handleReplay = () => {
+    window.location.reload(); // This will refresh the entire page
+  };
 
   return (
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
@@ -25,7 +29,9 @@ export function WinnerModal({
           <h2 className="text-3xl font-bold text-white mb-2">
             Congratulations!
           </h2>
-          <p className="text-gray-300">You've collected all the skills!</p>
+          <p className="text-gray-300">
+            You've collected all the skills Kanishk learned!
+          </p>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-6">
@@ -39,21 +45,28 @@ export function WinnerModal({
             </div>
           ))}
         </div>
-        <div className="flex flex-row justify-center gap-2">
-          <div className="text-center">
+
+        <div className="flex flex-col space-y-4">
+          <button
+            onClick={handleReplay}
+            className="flex items-center justify-center gap-2 bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+          >
+            <RefreshCw size={18} />
+            Play Again
+          </button>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <button
               onClick={onViewProjects}
               className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-colors"
             >
               View Projects
             </button>
-          </div>
-          <div className="text-center">
             <button
               onClick={onViewAchievements}
-              className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-colors"
+              className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg text-lg font-semibold transition-colors"
             >
-              Achievement
+              View Achievements
             </button>
           </div>
         </div>
