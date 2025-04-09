@@ -149,7 +149,7 @@ function App() {
 
               {/* LinkedIn Button */}
               <a
-                href="https://www.linkedin.com/in/your-profile" // Replace with your LinkedIn URL
+                href="https://www.linkedin.com/in/kanishk-shrivastava-134290244/" // Replace with your LinkedIn URL
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors"
